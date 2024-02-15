@@ -23,4 +23,4 @@ def get_product(product_id):
             "Historico": response.data[0]['Product_History']
         }
         return json.dumps(re, ensure_ascii=False, indent=2)
-app.run(host='0.0.0.0')
+app.run(host=os.environ.get("HOST"))
